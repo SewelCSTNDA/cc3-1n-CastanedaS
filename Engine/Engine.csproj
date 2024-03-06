@@ -10,17 +10,43 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Images\Locations\WALAPA\**" />
-    <EmbeddedResource Remove="Images\Locations\WALAPA\**" />
-    <None Remove="Images\Locations\WALAPA\**" />
+    <Compile Remove="Images\OracleCastle.jpg\**" />
+    <EmbeddedResource Remove="Images\OracleCastle.jpg\**" />
+    <None Remove="Images\OracleCastle.jpg\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="Images\Locations\WALAPA" />
+    <None Remove="Images\Castle1.jpg" />
+    <None Remove="Images\Castle2.jpg" />
+    <None Remove="Images\DarkForest1.jpg" />
+    <None Remove="Images\DarkForest2.jpg" />
+    <None Remove="Images\DarkForest3.jpg" />
+    <None Remove="Images\DarkForest4.jpg" />
+    <None Remove="Images\DarkForest5.jpg" />
+    <None Remove="Images\Forest.jpg" />
+    <None Remove="Images\GrassField1.jpg" />
+    <None Remove="Images\GrassField2.jpg" />
+    <None Remove="Images\GrassField3.jpg" />
+    <None Remove="Images\OracleCastle.jpg" />
+    <None Remove="Images\VIllage2.jpg" />
+    <None Remove="Images\Village1.jpg" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\Locations\WALAPA" />
+    <Resource Include="Images\Castle1.jpg" />
+    <Resource Include="Images\Castle2.jpg" />
+    <Resource Include="Images\DarkForest1.jpg" />
+    <Resource Include="Images\DarkForest2.jpg" />
+    <Resource Include="Images\DarkForest3.jpg" />
+    <Resource Include="Images\DarkForest4.jpg" />
+    <Resource Include="Images\DarkForest5.jpg" />
+    <Resource Include="Images\Forest.jpg" />
+    <Resource Include="Images\GrassField1.jpg" />
+    <Resource Include="Images\GrassField2.jpg" />
+    <Resource Include="Images\GrassField3.jpg" />
+    <Resource Include="Images\OracleCastle.jpg" />
+    <Resource Include="Images\VIllage2.jpg" />
+    <Resource Include="Images\Village1.jpg" />
   </ItemGroup>
 
 </Project>
