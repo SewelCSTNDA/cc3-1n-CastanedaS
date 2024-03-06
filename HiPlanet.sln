@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HiPlanet", "HiPlanet.csproj", "{821F314B-950E-4978-B295-1901B816238F}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Engine", "Engine\Engine.csproj", "{71ABE174-1A5E-474D-95A8-31BFC6065CF9}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{37CE115E-E307-4E2F-9A1F-5901008A377E}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
