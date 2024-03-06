@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UseWpf>true</UseWpf>
+ 
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Images\Locations\WALAPA\**" />
+    <EmbeddedResource Remove="Images\Locations\WALAPA\**" />
+    <None Remove="Images\Locations\WALAPA\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Images\Locations\WALAPA" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Locations\WALAPA" />
+  </ItemGroup>
+
+</Project>
