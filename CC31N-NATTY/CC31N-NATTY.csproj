@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>CC31N_SNOOKERS</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Background\bluu.jpg" />
+    <None Remove="Background\colz.jpg" />
+    <None Remove="Background\CoolBack.gif" />
+    <None Remove="Background\dawns.jpg" />
+    <None Remove="Background\dev.jpg" />
+    <None Remove="Background\devs.avif" />
+    <None Remove="Background\dope.jpg" />
+    <None Remove="Background\dsa.jpg" />
+    <None Remove="Background\facer.jpg" />
+    <None Remove="Background\fad.jpg" />
+    <None Remove="Background\fde.jpg" />
+    <None Remove="Background\fed.avif" />
+    <None Remove="Background\heat.jpg" />
+    <None Remove="Background\hellzzx.jpg" />
+    <None Remove="Background\lop.jpg" />
+    <None Remove="Background\natre.jpg" />
+    <None Remove="Background\natues.jpg" />
+    <None Remove="Background\peds.jpg" />
+    <None Remove="Background\pexels-dids-3754600.jpg" />
+    <None Remove="Background\pexels-pixabay-2150.jpg" />
+    <None Remove="Background\pexels-pixabay-235985.jpg" />
+    <None Remove="Background\pexels-pixabay-87009.jpg" />
+    <None Remove="Background\pexels.jpg" />
+    <None Remove="Background\pinkk.jpg" />
+    <None Remove="Background\qw.jpg" />
+    <None Remove="Background\qwe.jpg" />
+    <None Remove="Background\salt.jpg" />
+    <None Remove="Background\sat.jpg" />
+    <None Remove="Background\shhh.jpg" />
+    <None Remove="Background\skulz.jpg" />
+    <None Remove="Background\snier.png" />
+    <None Remove="Background\snierr.png" />
+    <None Remove="Background\souef.jpg" />
+    <None Remove="roar.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Engine\Engine.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Background\bluu.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>
