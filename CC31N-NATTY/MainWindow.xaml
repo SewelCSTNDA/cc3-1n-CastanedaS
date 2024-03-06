@@ -1,0 +1,210 @@
+﻿<Window x:Class="CC31N_SNOOKERS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CC31N_NATTY"
+        mc:Ignorable="d"
+        FontFamily="Algerian"
+        Title="The Shadow of Everia" Height="750" Width="1020">
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BoleanToVisibility"/>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="217"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width ="250"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
+      
+<!--  Menu page-->
+        <Label Grid.Row="0" FontWeight="UltraBlack" Grid.Column="0" Content="Menu"  FontSize="38" FontFamily="Elephant"  Canvas.ZIndex="1"  Foreground="DarkBlue" />
+        <Border BorderBrush="DarkRed" BorderThickness="2" Grid.Row="0" Grid.Column="1" />
+        <Border BorderBrush="DarkRed" BorderThickness="5" Grid.Row="0" Grid.Column="0"  Grid.ColumnSpan="3"/>
+        <Border BorderBrush="DarkRed" BorderThickness="5" Grid.Row="0" Grid.Column="2" />
+        <Image Grid.Row="0" Grid.Column="2"  Grid.ColumnSpan="1" Source="/Background/sat.jpg"  Stretch="Fill"  Opacity=".9"/>
+        <Image Grid.Row="0" Grid.Column="1"  Grid.ColumnSpan="1"  Source="/Background/salt.jpg"  Stretch="Fill"  Opacity=".9" />
+        <Image Grid.Row="0" Grid.Column="0"  Grid.ColumnSpan="1"  Source="/Background/sat.jpg" Opacity="0.8" Stretch="Fill" />
+        <!--<Image Source="" Grid.Row="0" Grid.Column="0" />-->
+        <!-- End of Menu -->
+      <!-- Enter-->
+      <!--PLayer Information-->
+        <Grid Grid.Row="1" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>                
+            </Grid.ColumnDefinitions>
+<!--End of player information page-->
+          
+          <!--rows of Player Information-->
+            <Label Grid.Row="0" Grid.Column="0"  Background="DarkKhaki"  BorderBrush="DarkRed" BorderThickness="4"/>
+            <Image Stretch="Fill" Source="/Background/skulz.jpg"  Opacity="0.5"/>
+            <Grid  Grid.Row="0" Grid.Column="0"  >
+                <Grid.RowDefinitions >
+                    <RowDefinition Height ="Auto"  />
+                    <RowDefinition Height ="Auto"/>
+                    <RowDefinition Height ="Auto"/>
+                    <RowDefinition Height ="Auto"/>
+                    <RowDefinition Height ="Auto"/>
+                    <RowDefinition Height ="Auto"/>
+              
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                  
+                  <!--content of Player Information-->
+                </Grid.ColumnDefinitions>
+                <Border  BorderThickness="1" Grid.Row="0" Grid.Column="0"/>
+                <Label Grid.Row="0" Grid.Column="0" Content="Name:"  FontSize="15" Foreground="DarkRed" FontWeight="Bold" />
+                <Label Grid.Row="0" Grid.Column="1" Content="{Binding CurrentPlayer.Name}"  FontSize="15" Foreground="DarkGoldenrod" />
+                <Label Grid.Row="1" Grid.Column="0" Content="Class:"  FontSize="15" Foreground="DarkRed" FontWeight="Bold" />
+                <Label Grid.Row="1" Grid.Column="1" Content="{Binding CurrentPlayer.CharacterClass}"  FontSize="15" Foreground="DarkGoldenrod" />
+                <Label Grid.Row="2" Grid.Column="0" Content="Hit Points:"  FontSize="15" Foreground="DarkRed" FontWeight="Bold"/>
+                <Label Grid.Row="2" Grid.Column="1" Content="{Binding CurrentPlayer.HitPoints}"   FontSize="15" Foreground="DarkGoldenrod"/>
+                <Label Grid.Row="3" Grid.Column="0" Content="Gold:"  FontSize="15" Foreground="DarkRed" FontWeight="Bold"/>
+                <Label Grid.Row="3" Grid.Column="1" Content="{Binding CurrentPlayer.Gold}"  FontSize="15" Foreground="DarkGoldenrod"/>
+                <Label Grid.Row="4" Grid.Column="0" Content="XP:"  FontSize="15" Foreground="DarkRed" FontWeight="Bold"/>
+                <Label Grid.Row="4" Grid.Column="1" Content="{Binding CurrentPlayer.ExperiencePoints}"  FontSize="15" Foreground="DarkGoldenrod"/>
+                <Label Grid.Row="5" Grid.Column="0" Content="Level:"  FontSize="15" Foreground="DarkRed" FontWeight="Bold"/>
+                <Label Grid.Row="5" Grid.Column="1" Content="{Binding CurrentPlayer.Level}"  FontSize="15" Foreground="DarkGoldenrod"/>
+            
+       
+            <!--End content of Player Information-->
+            
+            
+            <!--Player Image-->
+            </Grid>
+            <Label Grid.Row="2" Grid.Column="0" Content="Player Image" BorderBrush="DarkRed" BorderThickness="4"   Canvas.ZIndex="1" FontSize="21" Foreground="Red"/>
+            <Image Source="/Background/Bluu.jpg" Grid.Row="2" Grid.Column="0" Stretch="Fill"/>
+            <Image Source="/Background/snierr.png" Grid.Row="2" Grid.Column="0" Stretch="Fill" Opacity=".2"/>
+            <!--END ofplAYER Image-->
+          
+          <!--Inventory and Quest-->
+        </Grid>
+        <Label Grid.Row="2" Grid.Column="0" Content="Inventory and Quests" Canvas.ZIndex="1" BorderBrush="DarkRed" BorderThickness="4"  Foreground="DarkRed" FontSize="17" FontWeight="ExtraBold"/>
+        <Image Source="/Background/hellzzx.jpg" Grid.Row="2" Grid.Column="0" Stretch="Fill" Opacity=".6" />
+        <!--End of inventory and quest-->
+      
+      <!--Game MESsage -->
+        <Label Grid.Row="1" Grid.Column="2"   Canvas.ZIndex="1" BorderBrush="DarkRed" BorderThickness="4" 
+              />
+        <Label  Grid.Row="1" Grid.Column="2" Content="Game   Message"  Canvas.ZIndex="1" FontWeight="Bold" FontSize="21"  HorizontalAlignment="Center" Foreground="OrangeRed"/>
+     <!--Ftre_sMG    <TextBlock  Grid.Row="1" Grid.Column="2"  Margin="0,22" TextWrapping="Wrap" Canvas.ZIndex="1" FontWeight="UltraBold" FontSize="21" /> -->
+        <Image Grid.Row="1" Grid.Column="2" Source="/Background/dope.jpg" Opacity="0.9"  Visibility="Visible" Stretch="Fill"/>
+        <Image Grid.Row="1" Grid.Column="2" Source="/Background/dsa.jpg" Opacity="0.2"  Visibility="Visible" Stretch="Fill"/>
+        <!--END of game message-->
+      
+      <!--Item info and item button use-->
+        <Label Grid.Row="2" Grid.Column="1"  Background="CornflowerBlue"/>
+        <Grid Grid.Row="2" Grid.Column="1">
+        <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+          
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0"  Grid.Column="0" Content="Item Information" Canvas.ZIndex="1"  BorderBrush="DarkRed" BorderThickness="4" FontWeight="ExtraBold" Foreground="Red" FontSize="19" />
+            <Image Source="/Background/heat.jpg" Stretch="Fill" Opacity="0.9"/>
+            <Image Source="/Background/dev.jpg" Stretch="Fill" Opacity=".1"/>
+            <Label Grid.Row="0" Grid.Column="1" Content="Item Buttons" Canvas.ZIndex="1"  BorderBrush="DarkRed" BorderThickness="4" FontSize="19" FontWeight="ExtraBold" Foreground="Red"/>
+            
+            <Image Source="/Background/fde.jpg" Grid.Row="0"  Grid.Column="1" Stretch="Fill" Opacity=".5"/>
+            <!--End of item and buttons use-->
+          
+<!--Location image-->
+        </Grid>
+        <Label Grid.Row="1" Grid.Column="1" Canvas.ZIndex="1" BorderBrush="DarkRed" BorderThickness="4"/>
+        <Image Source="/Background/bluu.jpg" Grid.Row="1"  Grid.Column="1" Stretch="Fill" Opacity="1"/>
+        <Image Source="/Background/snierr.png" Grid.Row="1" Grid.Column="1" Stretch="Fill" Opacity=".1"/>
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                
+            </Grid.ColumnDefinitions>
+         
+            <Grid Grid.Row ="0" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                    
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="80"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="1" FontSize="13" 
+                           HorizontalAlignment="Center" Foreground="Red"
+                           Text="{Binding CurrentLocation.Name}"
+                        />
+                <Border Grid.Row="1" Grid.Column="1" BorderBrush="Yellow" BorderThickness="4"  />
+                <Image Grid.Row="1" Grid.Column="1" Stretch="Fill"
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center"
+                     
+                  Source = "{Binding CurrentLocation.ImageName}"/>
+
+                <TextBlock Grid.Row="2" Grid.Column="1" FontFamily="RockWell" FontSize="18" 
+                           HorizontalAlignment="Center" Foreground="DarkRed"
+                           TextWrapping ="Wrap"
+                           Text="{Binding CurrentLocation.Description}"/>
+            </Grid>
+            <!--End of location image-->
+       
+<!--Enemy location iamge-->
+
+
+            <Label Grid.Row="2" Grid.Column="1" Content="Enemy Information" Canvas.ZIndex="1" BorderBrush="DarkRed" BorderThickness="4" FontSize="19" FontWeight="DemiBold" Foreground="Red"/>
+            <Image Grid.Row="2" Grid.Column="1" Source="/Background/colz.jpg" Stretch="Fill" Opacity="1"/>
+            <Image Grid.Row="2" Grid.Column="1" Source="/Background/lop.jpg" Stretch="Fill" Opacity=".1"/>
+
+            <!--End of ENEMY image-->
+          
+          <!--Navigation button-->
+        </Grid>
+        <Label Grid.Row="2" Grid.Column="2" Canvas.ZIndex="1"  BorderBrush="DarkRed" BorderThickness="4"/>
+        <Image Grid.Row="2" Grid.Column="2" Source="/Background/qwe.jpg" Opacity="0.6" Stretch="Fill"/>
+        <Grid Grid.Row="2" Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width=" *"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Row="1" Grid.Column="0" Height="25" Width="65" Margin="10" Visibility="{Binding HasLocationToWest,Converter={StaticResource BoleanToVisibility}}" Click="OnClick_MoveWest"
+                    Content="West"  FontWeight="UltraBold" Foreground="DarkBlue" FontFamily="Elephant" Background="Orange" BorderBrush="DarkBlue" BorderThickness="3"/>
+            <Button Grid.Row="0" Grid.Column="1"   Height="25" Width="65" Margin="10" Visibility="{Binding HasLocationToNorth,Converter={StaticResource BoleanToVisibility}}" Click="OnClick_MoveNorth"
+                 Content="North"  FontWeight="UltraBold" Foreground="DarkBlue" FontFamily="Elephant" Background="Orange" BorderBrush="DarkBlue" BorderThickness="3" />
+            <Button Grid.Row="1" Grid.Column="2" Height="25" Width="65" Margin="10" Visibility="{Binding HasLocationToEast,Converter={StaticResource BoleanToVisibility}}" Click="OnClick_MoveEast"
+                  Content="East"  FontWeight="UltraBold" Foreground="DarkBlue" FontFamily="Elephant" Background="Orange" BorderBrush="DarkBlue" BorderThickness="3"/>
+            <Button Grid.Row="2" Grid.Column="1" Height="25" Width="65" Margin="10" Visibility="{Binding HasLocationToSouth,Converter={StaticResource BoleanToVisibility}}" Click="OnClick_MoveSouth"
+                      Content="South" FontWeight="UltraBold" Foreground="DarkBlue" FontFamily="Elephant" Background="Orange" BorderBrush="DarkBlue" BorderThickness="3"/>
+
+        </Grid>
+<!--End of Navigation button-->
+      
+      </Grid>
+</Window>
