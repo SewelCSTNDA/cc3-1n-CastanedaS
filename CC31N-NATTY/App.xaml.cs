@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows;
 
-namespace CC31N_SNOOKERS
+namespace HiPlanet
 {
     /// <summary>
     /// Interaction logic for App.xaml
