@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows;
 
-namespace HiPlanet
+namespace CC31N-NATTY
 {
     /// <summary>
     /// Interaction logic for App.xaml
