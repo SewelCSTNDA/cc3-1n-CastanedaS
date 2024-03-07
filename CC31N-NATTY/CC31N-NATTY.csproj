@@ -43,7 +43,7 @@
     <None Remove="Background\snier.png" />
     <None Remove="Background\snierr.png" />
     <None Remove="Background\souef.jpg" />
-    <None Remove="roar.png" />
+    <None Remove="Background\roar.png" />
   </ItemGroup>
 
   <ItemGroup>
