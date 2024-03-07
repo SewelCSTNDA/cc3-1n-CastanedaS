@@ -11,11 +11,11 @@ namespace Engine.Factories
         public World CreateWorld()
         {
             World newWorld = new World();
-            newWorld.AddLocation(0, 0, "Oracle's Refuge", "This is the place where you will be guided by a spirit.", "/Engine;component/Images/Locations/WALAPA");
-            newWorld.AddLocation(1, 0, "Slime Field", "This area full of harmful slimes.", "/Engine;component/Images/Locations/WALAPA");
-            newWorld.AddLocation(1, -1, "Village of Whispering Pines", "This place is full of villagers where you can get cool items.", "/Engine;component/Images/Locations/WALAPA");
+            newWorld.AddLocation(0, 0, "Oracle's Refuge", "This is the place where you will be guided by a spirit.", "/Engine;component/Images/OracleCastle.jpg");
+            newWorld.AddLocation(1, 0, "Slime Field", "This area full of harmful slimes.", "/Engine;component/Images/GrassField1.jpg");
+            newWorld.AddLocation(1, -1, "Village of Whispering Pines", "This place is full of villagers where you can get cool items.", "/Engine;component/Images/Village1.jpg");
             newWorld.AddLocation(1, -2, "Cryztalize Mineshaft", "This area is full of crystals and crystalized enemy", "/Engine;component/Images/Locations/WALAPA");
-            newWorld.AddLocation(2, -1, "Grassfield", "This place is filled with human size grasses.", "/Engine;component/Images/Locations/WALAPA");
+            newWorld.AddLocation(2, -1, "Grassfield", "This place is filled with human size grasses.", "/Engine;component/Images/GrassField2.jpg");
             newWorld.AddLocation(2, 0, "Vexen's Raid", "This place is where Vexen's starting his move to raid the castle.", "/Engine;component/Images/Locations/WALAPA");
             newWorld.AddLocation(2, 1, "Castle of Misty Gold", "This place is a trader's area where you can buy and sell stuff and many more.", "/Engine;component/Images/Locations/WALAPA");
             newWorld.AddLocation(1, 1, "????", "????", "/Engine;component/Images/Locations/WALAPA");
