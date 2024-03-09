@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows;
 
-namespace CC31N-NATTY
+namespace CC31N_NATTY
 {
     /// <summary>
     /// Interaction logic for App.xaml
