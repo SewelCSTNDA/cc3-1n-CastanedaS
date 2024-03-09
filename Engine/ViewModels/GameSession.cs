@@ -9,21 +9,21 @@ using System.Threading.Tasks;
 
 namespace Engine.ViewModels
 {
-    public class GameSession : INotifyPropertyChanged
+    public class GameSession : BaseNotifcationClass
     {
         private Location? _currentLocation;
-        public  Player CurrentPlayer { get; set; }
+        public Player? CurrentPlayer { get; set; }
         public Location? CurrentLocation {
             get { return _currentLocation; }
             set
             {
                 _currentLocation = value;
 
-                OnPropertyChanged("CurrentLocation");
-                OnPropertyChanged("HasLocationToNorth");
-                OnPropertyChanged("HasLocationToSouth");
-                OnPropertyChanged("HasLocationToWest");
-                OnPropertyChanged("HasLocationToEast");
+                OnPropertyChanged(nameof(CurrentLocation));
+                OnPropertyChanged(nameof(HasLocationToNorth));
+                OnPropertyChanged(nameof(HasLocationToSouth));
+                OnPropertyChanged(nameof(HasLocationToWest));
+                OnPropertyChanged(nameof(HasLocationToEast));
             }
         }
 
@@ -36,54 +36,52 @@ namespace Engine.ViewModels
         public bool HasLocationToWest => CurrentLocation != null && CurrentWorld.LocationAt(CurrentLocation.XCoordinate - 1, CurrentLocation.YCoordinate) != null;
         public GameSession()
         {
-            CurrentPlayer = new Player();
-            CurrentPlayer.Name = "SINALSAL";
-            CurrentPlayer.CharacterClass = "Warrior";
-            CurrentPlayer.HitPoints = 100;
-            CurrentPlayer.ExperiencePoints = 0;
-            CurrentPlayer.Gold = 10;
-            CurrentPlayer.Level = 1;
+            Player player = new Player {
+                Name = "SINALSAL",
+                CharacterClass = "ASSasin",
+                HitPoints = 100,
+                ExperiencePoints = 0,
+                Gold = 10,
+                Level = 1
+            };
 
 
-            WorldFactory worldfactory = new WorldFactory();
-            CurrentWorld = worldfactory.CreateWorld();
+           
+
+
+            CurrentWorld = WorldFactory.CreateWorld();
 
             CurrentLocation = CurrentWorld.LocationAt(0, -1);
-     
+
         }
 
 
-        public event PropertyChangedEventHandler? PropertyChanged;
-        protected virtual void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
 
 
         public void MoveNorth()
         {
-            if (CurrentLocation != null)
+            if (HasLocationToNorth && CurrentLocation != null)
             {
                 CurrentLocation = CurrentWorld.LocationAt(CurrentLocation.XCoordinate, CurrentLocation.YCoordinate + 1);
             }
         }
         public void MoveSouth()
         {
-            if (CurrentLocation != null)
+            if (HasLocationToSouth && CurrentLocation != null)
             {
                 CurrentLocation = CurrentWorld.LocationAt(CurrentLocation.XCoordinate, CurrentLocation.YCoordinate - 1);
             }
         }
         public void MoveWest()
         {
-            if (CurrentLocation != null)
+            if (HasLocationToWest && CurrentLocation != null)
             {
                 CurrentLocation = CurrentWorld.LocationAt(CurrentLocation.XCoordinate - 1, CurrentLocation.YCoordinate);
             }
         }
         public void MoveEast()
         {
-            if (CurrentLocation != null)
+            if (HasLocationToEast && CurrentLocation != null)
             {
                 CurrentLocation = CurrentWorld.LocationAt(CurrentLocation.XCoordinate + 1, CurrentLocation.YCoordinate);
             }
