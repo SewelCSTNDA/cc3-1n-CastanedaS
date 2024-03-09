@@ -181,7 +181,7 @@
           
           <!--Navigation button-->
         </Grid>
-        <Label Grid.Row="2" Grid.Column="2" Canvas.ZIndex="1"  BorderBrush="DarkRed" BorderThickness="4"/>
+        <Label Grid.Row="2" Grid.Column="2" BorderBrush="DarkRed" BorderThickness="4"/>
         <Image Grid.Row="2" Grid.Column="2" Source="/Background/qwe.jpg" Opacity="0.6" Stretch="Fill"/>
         <Grid Grid.Row="2" Grid.Column="2">
             <Grid.RowDefinitions>
