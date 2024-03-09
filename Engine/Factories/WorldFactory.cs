@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Engine.Models;
 namespace Engine.Factories
 {
-   internal class WorldFactory
+   internal static class WorldFactory
     {
         public World CreateWorld()
         {
