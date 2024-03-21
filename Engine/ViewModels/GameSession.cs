@@ -37,12 +37,12 @@ namespace Engine.ViewModels
         public GameSession()
         {
             Player player = new Player {
-                Name = "SINALSAL",
-                CharacterClass = "ASSasin",
-                HitPoints = 100,
+                Name = "Rainier",
+                CharacterClass = "Warrior",
+                HitPoints = 20,
                 ExperiencePoints = 0,
-                Gold = 10,
-                Level = 1
+                Gold = 0,
+                Level = 0
             };
 
 

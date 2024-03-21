@@ -15,10 +15,10 @@ namespace Engine.Models
         {
 
             _standardGameItems = new List<GameItem>();
-            _standardGameItems.Add(new Weapon(100, "Sword", 2, "Long Sword", 1, 3));
-            _standardGameItems.Add(new Weapon(101, "Sword", 6, "Katana", 1, 5));
-            _standardGameItems.Add(new Weapon(102, "Sword", 5, "Machete", 1, 3));
-            _standardGameItems.Add(new Weapon(103, "Sword", 10, "Claymore", 1, 6));
+            _standardGameItems.Add(new Weapon(10, "Sword", 2, "Long Sword", 1, 3));
+            _standardGameItems.Add(new Weapon(11, "Sword", 6, "Katana", 1, 5));
+            _standardGameItems.Add(new Weapon(12, "Sword", 5, "Machete", 1, 3));
+            _standardGameItems.Add(new Weapon(13, "Sword", 10, "Claymore", 1, 6));
 
 
 
